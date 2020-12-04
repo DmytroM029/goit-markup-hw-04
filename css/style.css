@@ -127,9 +127,10 @@ img {
 .site-auth {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 .site-auth .item  + .item /*альтернатива .site-auth .item:not(:last-child). Только делает последним не правый, а левый элемент (от первого левого, который не учитывается).*/ {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 .site-auth .auth-link {
   color: var(--text-color);
@@ -143,6 +144,27 @@ img {
   color: var(--title-text-color);
 }
 
+.auth-link::before /*1:24:27 https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
+{
+  display: inline-block;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.icon-mail::before {
+  background-image: url(../images/imgsprite/mail.svg);
+  height: 12px;
+  width: 16px;
+}
+.icon-telephone::before {
+  display: block;
+  background-image: url(../images/imgsprite/smartphone.svg);
+  height: 16px;
+  width: 10px;
+}
 /*Общее оформление текста*/
 
 .section {
@@ -155,7 +177,8 @@ img {
   margin-bottom: 94px;
 }
 .products-title,
-.team-title {
+.team-title,
+.clients-title {
   padding-bottom: 50px;
   font-family: Roboto;
   font-style: normal;
@@ -174,7 +197,17 @@ img {
   background-color: #2f303a;
   text-align: center;
   justify-content: center;
-  width: 100%;
+  max-width: 1600px;
+  min-height: 600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat; /*48:55 мин https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
+  /*background-position: center;*/
+  background-size: cover;
 }
 
 .hero-section .container {
@@ -233,7 +266,7 @@ img {
 
 /*///////Наши преимуества(advantages)/////*/
 /*advantages-title {}*/
-
+/*1:17:40 https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
 .advantages-list {
   display: flex;
   flex-wrap: wrap; /*(29:42) https://www.youtube.com/watch?v=GezCqjS6SKo&feature=youtu.be*/
@@ -248,12 +281,26 @@ img {
 }
 
 .advantages-list-item {
-  display: inline-block;
-  flex-basis: calc(100% / 4 - 30px);
+  /*https://drive.google.com/file/d/1mQW8d7rKEsReSolvmg-kIhsIiiTtFx5x/view*/
+  flex-basis: calc(
+    100% / 4 - 30px
+  ); /*7:00:00 https://drive.google.com/file/d/1mQW8d7rKEsReSolvmg-kIhsIiiTtFx5x/view*/
   margin-top: 10px;
 }
 .advantages-list-item:not(:first-child) {
   margin-left: 30px;
+}
+.advantages-list-item::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-image: url(/images/imgsprite/astronaut.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .visually-hidden {
@@ -314,7 +361,7 @@ img {
 }
 .team-list .item {
   display: inline-block;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
 }
 .team-list .item:not(:last-child) {
   margin-right: 30px;
@@ -348,6 +395,31 @@ img {
 .team-list .item {
   background-color: var(--hero-color);
 }
+.social-list {
+  display: flex;
+  margin: 0px 32px 32px 30px;
+  justify-content: space-between;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+}
+/*.social-item: hover,
+.social-item: focus {
+  color: tomato;
+  border-radius: 50px;
+  background-color: blue;
+}*/
+.social-item {
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
 /*Footer*/
 .footer {
   padding-top: 60px;
