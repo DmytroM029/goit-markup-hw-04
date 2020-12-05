@@ -297,10 +297,16 @@ img {
   background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
-  background-image: url(/images/imgsprite/astronaut.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.advantages-list-item:nth-child(1)::before {
+  background-image: url(/images/imgsprite/astronaut.svg);
+  width: 70px;
+}
+.advantages-list-item:nth-child(2)::before {
+  background-image: url(/images/imgsprite/clock.svg);
 }
 
 .visually-hidden {
