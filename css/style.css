@@ -511,9 +511,17 @@ img {
   fill: var(--social-link-color);
   width: 170px;
   height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
+
 .clients-list_item:not(:last-child) {
   margin-right: 30px;
+}
+.clients-list_link:hover,
+.clients-list_link:focus {
+  fill: var(--title-text-color);
+  border: 1px solid var(--title-text-color);
 }
 
 /*Footer*/
@@ -558,6 +566,20 @@ img {
 
 .footer-address-list .item:not(:last-child) {
   margin-bottom: 9px;
+}
+.footer-list {
+  display: flex;
+}
+
+.invite-social_title {
+  color: var(--hero-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 /*/////////////////////portfolio.html////////////////////////*/
