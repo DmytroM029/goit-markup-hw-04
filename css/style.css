@@ -23,7 +23,7 @@ body {
   background-color: var(--hero-color);
   font-family: Roboto, sans-serif;
   margin: 0;
-  width: 100%;
+  width: 1600px;
   justify-content: center;
 }
 
@@ -145,6 +145,7 @@ img {
 .site-auth .auth-link:focus {
   color: var(--title-text-color);
 }
+
 .auth-link {
   display: flex;
   align-items: center;
@@ -164,17 +165,29 @@ img {
   display: flex;
 }*/
 .icon-mail::before {
+  content: "";
   display: block;
   background-image: url(../images/imgsprite/mail.svg);
   height: 12px;
   width: 16px;
+  fill: var(--title-text-color);
 }
 .icon-telephone::before {
+  content: "";
   display: block;
   background-image: url(../images/imgsprite/smartphone.svg);
   height: 16px;
   width: 10px;
 }
+
+.icon-mail::before:hover,
+.icon-mail::before:focus,
+.icon-telephone::before:hover,
+.icon-telephone::before:focus {
+  content: "";
+  fill: var(--title-text-color);
+}
+
 /*Общее оформление текста*/
 
 .section {
@@ -183,7 +196,6 @@ img {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-top: 94px;
   margin-bottom: 94px;
 }
 .products-title,
@@ -192,11 +204,17 @@ img {
   padding-bottom: 50px;
   font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.team-title,
+.clients-title {
+  display: inline-block;
+  margin-top: 94px;
 }
 
 /*Hero*/
@@ -281,9 +299,8 @@ img {
 .advantages-list {
   display: flex;
   flex-wrap: wrap; /*(29:42) https://www.youtube.com/watch?v=GezCqjS6SKo&feature=youtu.be*/
-  margin-left: -10px;
-  margin-top: -10px;
-  margin-top: 96px;
+  margin-left: -30px;
+  /*margin-top: -30px;*/
   text-align: start;
   /*  flex-wrap: wrap;
   margin-left: -10px;
@@ -296,31 +313,65 @@ img {
   flex-basis: calc(
     100% / 4 - 30px
   ); /*7:00:00 https://drive.google.com/file/d/1mQW8d7rKEsReSolvmg-kIhsIiiTtFx5x/view*/
-  margin-top: 10px;
+  /*margin-top: 30px;*/
+  margin-left: 30px;
 }
 .advantages-list-item:not(:first-child) {
   margin-left: 30px;
 }
 .advantages-list-item::before {
-  content: "";
   display: block;
+  content: "";
   height: 120px;
-  background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
-  background-size: contain;
+  background-size: 70px; /*33:00 https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #f5f4fa;
 }
-.icon-1 {
-  /*или .advantages-list-item:nth-child(1)::before {*/
+
+.icon-antena::before {
+  content: "";
+  background-image: url(/images/imgsprite/antenna.svg);
+}
+
+.icon-clock::before {
+  content: "";
+  background-image: url(/images/imgsprite/clock.svg);
+}
+
+.icon-diagram::before {
+  content: "";
+  background-image: url(/images/imgsprite/diagram.svg);
+}
+
+.icon-astronaut::before {
+  content: "";
   background-image: url(/images/imgsprite/astronaut.svg);
-  height: 70px;
+}
+
+/*ИЛИ .advantages-list-item:nth-child(1)::before {
+  content: "";
+  background-image: url(/images/imgsprite/antenna.svg);
 }
 .advantages-list-item:nth-child(2)::before {
+  content: "";
+  background-image: url(/images/imgsprite/clock.svg);
+}
+.advantages-list-item:nth-child(3)::before {
+  content: "";
+  background-image: url(/images/imgsprite/diagram.svg);
+}
+.advantages-list-item:nth-child(4)::before {
+  content: "";
+  background-image: url(/images/imgsprite/astronaut.svg);
+}*/
+
+/*.advantages-list-item:nth-child(2)::before {
   background-image: url(/images/imgsprite/clock.svg);
   height: 70px;
-}
+}*/
 
 .visually-hidden {
   position: absolute;
@@ -370,11 +421,6 @@ img {
 
 /*/////Team/////*/
 
-/*Значение team-title в общем оформлении текста*/
-.team-title {
-  display: inline-block;
-  margin-top: 94px;
-}
 .team-list {
   display: flex;
 }
