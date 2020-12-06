@@ -145,37 +145,16 @@ img {
 .site-auth .auth-list_link:focus {
   color: var(--title-text-color);
 }
+.auth-list_icona{
+  width:16px;
+height:12px;}
 
 .auth-list_link {
   display: flex;
   align-items: center;
 }
-.auth-list_link::before /*1:24:27 https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
-{
-  /*44:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
-  display: inline-block;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 10px;
-}
 
-.social-list {
-  display: flex;
 
-  justify-content: space-between;
-}
-.social-list_link {
-  /*1:43:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
-  display: flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  fill: var(--social-link-color);
-}
 .social-list_link:hover,
 .social-list_link:focus {
   background-color: var(--title-text-color);
