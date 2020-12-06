@@ -23,7 +23,7 @@ body {
   background-color: var(--hero-color);
   font-family: Roboto, sans-serif;
   margin: 0;
-  width: 1600px;
+  width: 100%;
   justify-content: center;
 }
 
@@ -59,7 +59,7 @@ img {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
+  width: 1200px;
   padding: 0 15px; /*или padding-left: 15px; padding-right: 15px;*/
 }
 
@@ -72,6 +72,7 @@ img {
 .header .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .main-nav,
 .site-nav {
@@ -144,11 +145,19 @@ img {
 .site-auth .auth-list_link:hover,
 .site-auth .auth-list_link:focus {
   color: var(--title-text-color);
+  fill: var(--title-text-color);
 }
 .auth-list_icona{
-  width:16px;
-height:12px;
-marginr}
+width:16px;
+height:12px;}
+
+.auth-list_iconb{
+width:10px;
+height:16px;}
+.auth-list_icona,.auth-list_iconb{
+  fill: currentColor;
+margin-right: 10px;}
+
 
 .auth-list_link {
   display: flex;
@@ -166,10 +175,7 @@ marginr}
   fill: var(--hero-color);
 }
 
-.social-list_icon {
-  width: 20px;
-  height: 20px;
-}
+
 /*Иконки через Before 
 .icon-mail,
 .icon-telephone {
@@ -622,7 +628,6 @@ display: block;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-top: 10px;
-
 }
 
 .footer-list{
@@ -651,7 +656,6 @@ display: block;
 .footer-list_link:focus {
   background-color: var(--title-text-color);
   fill: var(--hero-color));
-
 }
 
 .footer-list_link:hover .footer-list_icon,
