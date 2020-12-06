@@ -333,6 +333,7 @@ img {
 }
 
 .icon-antena::before {
+  /*Если через div и Sprite - 2:10:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
   content: "";
   background-image: url(/images/imgsprite/antenna.svg);
 }
@@ -424,14 +425,23 @@ img {
 
 .team-list {
   display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 .team-list .item {
-  display: inline-block;
+  flex-basis: calc(100%/3 - 30px);
+   margin-top: 30px;
+  margin-left: 30px;
   margin-bottom: 100px;
 }
-.team-list .item:not(:last-child) {
-  margin-right: 30px;
+
+.team-list .item:first-child{
+  margin-left: 0;
 }
+
+
+
+
 .teammate-img,
 .teammate-position {
   margin-bottom: 30px;
@@ -529,7 +539,9 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
+.footer-conteiner_items{
+   display: flex;
+}
 .footer-container {
   margin-bottom: 20px;
 }
@@ -560,27 +572,76 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.footer .logo {
-  margin-top: 30px;
-}
 
 .footer-address-list .item:not(:last-child) {
-  margin-bottom: 9px;
-}
+  margin-bottom: 9px;}
+  .footer-address-list .item:first-child {
+  margin-top: 20px;
+  }
 .footer-list {
   display: flex;
 }
 
-.invite-social_title {
+.footer-first_item{
+margin-right: 70px;
+}
+/*!!!!!!!!!!footer-second_item!!!!!!!!!*/
+.footer-second_item{
+width:206px;
+display: block;
+}
+.footer-social_title {/*42:00 https://www.youtube.com/watch?v=8rDA1NfOqEs&feature=youtu.be*/
+  display: inline-block;
   color: var(--hero-color);
   font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-top: 10px;
+
 }
+
+.footer-list{
+  display: flex;
+}
+
+.footer-list_social{
+  display: flex;
+}
+.footer-list_link {
+  /*1:43:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  fill: var(--hero-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-list_item:not(:last-child){
+  margin-right: 10px;
+}
+
+.footer-list_link:hover,
+.footer-list_link:focus {
+  background-color: var(--title-text-color);
+  fill: var(--hero-color));
+
+}
+
+.footer-list_link:hover .footer-list_icon,
+.footer-list_link:focus .footer-list_icon {
+  fill: var(--hero-color);
+}
+
+.footer-list_icon {
+  width: 20px;
+  height: 20px;}
 
 /*/////////////////////portfolio.html////////////////////////*/
 
@@ -630,6 +691,8 @@ img {
 .filter-list {
   display: flex;
   flex-wrap: wrap; /*Позволяем элементам перепрыгивать на другие строки, которые по умолчанию располагаются сверху вниз (вдоль поперечной оси).*/
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .card-content {
@@ -637,12 +700,17 @@ img {
   padding: 20px 24px;
 }
 
-.filter-list-item {
-  width: calc(
-    100%-60px / 3
-  ); /*Модуль 3. Вебинар №6. Flexbox 1:00:00 (1:16:00)*/
-  margin-bottom: 30px;
-  margin-right: 30px;
+.filter-list-item {/*57:00https://www.youtube.com/watch?v=c32Jb9Ejz4k&feature=youtu.be*/
+  flex-basis: calc(100%/3 - 30px);/*width: calc(
+    100%-60px / 3*/
+   /*Модуль 3. Вебинар №6. Flexbox 1:00:00 (1:16:00)*/
+  /*margin-bottom: 30px;
+  margin-right: 30px;*/
+  margin-top: 30px;
+  margin-left: 30px;
+  background: var(--hero-color);
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 } /*100%строки; 60px- суммарное значение 2 маржинов по 30px каждый в одной строке (2 маржина между 3-х элементов) / 3-количество элементов в строке*/
 
 .filter-list-item:nth-child(3n) {
