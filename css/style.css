@@ -5,6 +5,7 @@
   --hero-color: #ffffff;
   --footer-link-color: rgba(255, 255, 255, 0.6);
   --social-link-color: #afb1b8;
+  --icon-background-color: #f5f4fa;
 }
 
 *,
@@ -147,23 +148,25 @@ img {
   color: var(--title-text-color);
   fill: var(--title-text-color);
 }
-.auth-list_icona{
-width:16px;
-height:12px;}
+.auth-list_icona {
+  width: 16px;
+  height: 12px;
+}
 
-.auth-list_iconb{
-width:10px;
-height:16px;}
-.auth-list_icona,.auth-list_iconb{
+.auth-list_iconb {
+  width: 10px;
+  height: 16px;
+}
+.auth-list_icona,
+.auth-list_iconb {
   fill: currentColor;
-margin-right: 10px;}
-
+  margin-right: 10px;
+}
 
 .auth-list_link {
   display: flex;
   align-items: center;
 }
-
 
 .social-list_link:hover,
 .social-list_link:focus {
@@ -174,7 +177,6 @@ margin-right: 10px;}
 .social-list_link:focus .social-list_icon {
   fill: var(--hero-color);
 }
-
 
 /*Иконки через Before 
 .icon-mail,
@@ -214,7 +216,7 @@ margin-right: 10px;}
   text-align: center;
   letter-spacing: 0.03em;
   padding-top: 94px;
-   padding-bottom: 94px;
+  padding-bottom: 94px;
 }
 .products-title,
 .team-title,
@@ -232,7 +234,6 @@ margin-right: 10px;}
 .team-title,
 .clients-title {
   display: inline-block;
-
 }
 
 /*Hero*/
@@ -337,21 +338,21 @@ margin-right: 10px;}
 .advantages-list-item:not(:first-child) {
   margin-left: 30px;
 }
-.advantages-list-item::before {
+/*.advantages-list-item::before {
   display: block;
   content: "";
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
   background-size: 70px; /*33:00 https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
-  background-repeat: no-repeat;
+/*background-repeat: no-repeat;
   background-position: center;
   background-color: #f5f4fa;
 }
 
 .icon-antena::before {
   /*Если через div и Sprite - 2:10:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
-  content: "";
+/* content: "";
   background-image: url(/images/imgsprite/antenna.svg);
 }
 
@@ -369,6 +370,7 @@ margin-right: 10px;}
   content: "";
   background-image: url(/images/imgsprite/astronaut.svg);
 }
+*/
 
 /*ИЛИ .advantages-list-item:nth-child(1)::before {
   content: "";
@@ -426,10 +428,28 @@ margin-right: 10px;}
   font-weight: 400;
 }
 
+.advantages-icon_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*fill: var(--social-link-color);*/
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--icon-background-color);
+  margin-bottom: 30px;
+}
+
+.advantages-icon_link:hover,
+.advantages-icon_link:focus {
+  fill: var(--title-text-color);
+  border: 1px solid var(--title-text-color);
+}
+
 /*Product*/
 
 /*Значение products-title в общем оформлении текста*/
-.section.products-section{
+.section.products-section {
   padding-top: 0;
 }
 .product-list {
@@ -448,11 +468,11 @@ margin-right: 10px;}
 .team-list .item {
   display: inline-block;
   margin-bottom: 90px;
-  background: #FFFFFF;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
-
 
 .team-list .item:not(:last-child) {
   margin-right: 30px;
@@ -565,8 +585,8 @@ border-radius: 0px 0px 4px 4px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-conteiner_items{
-   display: flex;
+.footer-conteiner_items {
+  display: flex;
 }
 .footer-container {
   margin-bottom: 20px;
@@ -600,23 +620,25 @@ border-radius: 0px 0px 4px 4px;
 }
 
 .footer-address-list .item:not(:last-child) {
-  margin-bottom: 9px;}
-  .footer-address-list .item:first-child {
+  margin-bottom: 9px;
+}
+.footer-address-list .item:first-child {
   margin-top: 20px;
-  }
+}
 .footer-list {
   display: flex;
 }
 
-.footer-first_item{
-margin-right: 70px;
+.footer-first_item {
+  margin-right: 70px;
 }
 /*!!!!!!!!!!footer-second_item!!!!!!!!!*/
-.footer-second_item{
-width:206px;
-display: block;
+.footer-second_item {
+  width: 206px;
+  display: block;
 }
-.footer-social_title {/*42:00 https://www.youtube.com/watch?v=8rDA1NfOqEs&feature=youtu.be*/
+.footer-social_title {
+  /*42:00 https://www.youtube.com/watch?v=8rDA1NfOqEs&feature=youtu.be*/
   display: inline-block;
   color: var(--hero-color);
   font-family: Roboto;
@@ -630,11 +652,11 @@ display: block;
   padding-top: 10px;
 }
 
-.footer-list{
+.footer-list {
   display: flex;
 }
 
-.footer-list_social{
+.footer-list_social {
   display: flex;
 }
 .footer-list_link {
@@ -648,14 +670,14 @@ display: block;
   fill: var(--hero-color);
   background-color: rgba(255, 255, 255, 0.1);
 }
-.footer-list_item:not(:last-child){
+.footer-list_item:not(:last-child) {
   margin-right: 10px;
 }
 
 .footer-list_link:hover,
 .footer-list_link:focus {
   background-color: var(--title-text-color);
-  fill: var(--hero-color));
+  fill: var(--hero-color);
 }
 
 .footer-list_link:hover .footer-list_icon,
@@ -665,7 +687,8 @@ display: block;
 
 .footer-list_icon {
   width: 20px;
-  height: 20px;}
+  height: 20px;
+}
 
 /*/////////////////////portfolio.html////////////////////////*/
 
@@ -723,16 +746,18 @@ display: block;
   padding: 20px 24px;
 }
 
-.filter-list-item {/*57:00https://www.youtube.com/watch?v=c32Jb9Ejz4k&feature=youtu.be*/
-  flex-basis: calc(100%/3 - 30px);/*width: calc(
+.filter-list-item {
+  /*57:00https://www.youtube.com/watch?v=c32Jb9Ejz4k&feature=youtu.be*/
+  flex-basis: calc(100% / 3 - 30px); /*width: calc(
     100%-60px / 3*/
-   /*Модуль 3. Вебинар №6. Flexbox 1:00:00 (1:16:00)*/
+  /*Модуль 3. Вебинар №6. Flexbox 1:00:00 (1:16:00)*/
   /*margin-bottom: 30px;
   margin-right: 30px;*/
   margin-top: 30px;
   margin-left: 30px;
   background: var(--hero-color);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 } /*100%строки; 60px- суммарное значение 2 маржинов по 30px каждый в одной строке (2 маржина между 3-х элементов) / 3-количество элементов в строке*/
 
 .filter-list-item:nth-child(3n) {
