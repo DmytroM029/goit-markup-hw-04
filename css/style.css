@@ -59,7 +59,7 @@ img {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  width: 1230px;
   padding: 0 15px; /*или padding-left: 15px; padding-right: 15px;*/
 }
 
@@ -134,23 +134,23 @@ img {
 .site-auth .item  + .item /*альтернатива .site-auth .item:not(:last-child). Только делает последним не правый, а левый элемент (от первого левого, который не учитывается).*/ {
   margin-left: 30px;
 }
-.site-auth .auth-link {
+.site-auth .auth-list_link {
   color: var(--text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.site-auth .auth-link:hover,
-.site-auth .auth-link:focus {
+.site-auth .auth-list_link:hover,
+.site-auth .auth-list_link:focus {
   color: var(--title-text-color);
 }
 
-.auth-link {
+.auth-list_link {
   display: flex;
   align-items: center;
 }
-.auth-link::before /*1:24:27 https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
+.auth-list_link::before /*1:24:27 https://www.youtube.com/watch?v=VThG4A-4bJQ&feature=youtu.be*/
 {
   /*44:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
   display: inline-block;
@@ -160,11 +160,42 @@ img {
   background-position: center;
   margin-right: 10px;
 }
-/*.icon-mail,
+
+.social-list {
+  display: flex;
+
+  justify-content: space-between;
+}
+.social-list_link {
+  /*1:43:00 https://www.youtube.com/watch?v=l7qT8Umnyuo&feature=youtu.be*/
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  fill: var(--social-link-color);
+}
+.social-list_link:hover,
+.social-list_link:focus {
+  background-color: var(--title-text-color);
+}
+
+.social-list_link:hover .social-list_icon,
+.social-list_link:focus .social-list_icon {
+  fill: var(--hero-color);
+}
+
+.social-list_icon {
+  width: 20px;
+  height: 20px;
+}
+/*Иконки через Before 
+.icon-mail,
 .icon-telephone {
   display: flex;
 }*/
-.icon-mail::before {
+/*.icon-mail::before {
   content: "";
   display: block;
   background-image: url(../images/imgsprite/mail.svg);
@@ -179,16 +210,15 @@ img {
   height: 16px;
   width: 10px;
   fill: currentColor;
-}
+}*/
 
-.icon-mail::before:hover,
+/*.icon-mail::before:hover,
 .icon-mail::before:focus,
 .icon-telephone::before:hover,
 .icon-telephone::before:focus {
   content: "";
   fill: var(--title-text-color);
-}
-
+}*/
 /*Общее оформление текста*/
 
 .section {
@@ -197,7 +227,8 @@ img {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-top: 94px;
+  padding-top: 94px;
+   padding-bottom: 94px;
 }
 .products-title,
 .team-title,
@@ -215,7 +246,7 @@ img {
 .team-title,
 .clients-title {
   display: inline-block;
-  padding-top: 94px;
+
 }
 
 /*Hero*/
@@ -412,7 +443,9 @@ img {
 /*Product*/
 
 /*Значение products-title в общем оформлении текста*/
-
+.section.products-section{
+  padding-top: 0;
+}
 .product-list {
   display: flex;
 }
@@ -425,22 +458,30 @@ img {
 
 .team-list {
   display: flex;
+}
+.team-list .item {
+  display: inline-block;
+  margin-bottom: 90px;
+  background: #FFFFFF;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+}
+
+
+.team-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+/*.team-list {
+  display: flex;
   margin-top: -30px;
   margin-left: -30px;
 }
 .team-list .item {
-  flex-basis: calc(100%/3 - 30px);
-   margin-top: 30px;
+  flex-basis: calc(100%/4 - 30px);
+  margin-top: 30px;
   margin-left: 30px;
   margin-bottom: 100px;
-}
-
-.team-list .item:first-child{
-  margin-left: 0;
-}
-
-
-
+}*/
 
 .teammate-img,
 .teammate-position {
@@ -511,7 +552,6 @@ img {
   margin: 0;
   list-style: none;
   display: flex;
-  margin-bottom: 94px;
 }
 
 .clients-list_link {
@@ -653,7 +693,6 @@ display: block;
 .filter-buttom-list {
   display: flex;
   justify-content: center;
-  margin-top: 94px;
   margin-bottom: 34px;
   padding-bottom: 8px;
 }
@@ -709,7 +748,6 @@ display: block;
   margin-top: 30px;
   margin-left: 30px;
   background: var(--hero-color);
-  border: 1px solid #EEEEEE;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 } /*100%строки; 60px- суммарное значение 2 маржинов по 30px каждый в одной строке (2 маржина между 3-х элементов) / 3-количество элементов в строке*/
 
